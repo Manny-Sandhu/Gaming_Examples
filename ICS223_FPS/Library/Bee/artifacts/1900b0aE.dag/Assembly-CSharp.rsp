@@ -359,11 +359,15 @@
 -analyzer:"C:/Program Files/Unity 2022.3.16f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/FPSInput.cs"
 "Assets/Scripts/Hole.cs"
+"Assets/Scripts/Laser.cs"
 "Assets/Scripts/MouseLook.cs"
+"Assets/Scripts/PlayerCharacter.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/RayShooter.cs"
 "Assets/Scripts/ReactiveTarget.cs"
+"Assets/Scripts/SceneController.cs"
 "Assets/Scripts/Spin.cs"
+"Assets/Scripts/WanderingAI.cs"
 -langversion:9.0
 
 /deterministic
