@@ -372,6 +372,7 @@
 "Assets/Scripts/SceneController.cs"
 "Assets/Scripts/Spin.cs"
 "Assets/Scripts/WanderingAI.cs"
+"Assets/Scripts/WanderingIguanna.cs"
 -langversion:9.0
 
 /deterministic
