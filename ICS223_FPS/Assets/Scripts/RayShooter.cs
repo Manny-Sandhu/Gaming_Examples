@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RayShooter : MonoBehaviour
 {
     [SerializeField] private Camera cam;
-    [SerializeField] private int aimSize = 16;
     // Start is called before the first frame update
     void Start()
     {
         // hide the mouse cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        /*Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;*/
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class RayShooter : MonoBehaviour
         Destroy(sphere);
     }
 
-    void OnGUI()
+    /*void OnGUI()
     {
         GUIStyle style = new GUIStyle();
         style.fontSize = aimSize;
@@ -57,5 +57,5 @@ public class RayShooter : MonoBehaviour
         float posX = cam.pixelWidth / 2 - aimSize / 4;
         float posY = cam.pixelHeight / 2 - aimSize / 2;
         GUI.Label(new Rect(posX, posY, aimSize, aimSize), "*", style);
-    }
+    }*/
 }
