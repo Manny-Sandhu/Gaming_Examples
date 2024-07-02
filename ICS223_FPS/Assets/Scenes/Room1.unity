@@ -8910,6 +8910,7 @@ MonoBehaviour:
   iguanaSpawnPoints: {fileID: 2093272037}
   iguanaNum: 30
   enemyNum: 4
+  ui: {fileID: 1048645888}
 --- !u!4 &828895916
 Transform:
   m_ObjectHideFlags: 0
@@ -10434,7 +10435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1094054531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13344,7 +13345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c90e46a2706161419306e2f2397b627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1048645888}
   settings: {fileID: 334136066}
 --- !u!1 &1880650556
 GameObject:

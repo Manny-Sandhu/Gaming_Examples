@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class RayShooter : MonoBehaviour
+public class RayShooter : ActiveDurringGamePlay
 {
     [SerializeField] private Camera cam;
     // Start is called before the first frame update

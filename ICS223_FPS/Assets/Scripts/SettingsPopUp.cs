@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SettingsPopUp : MonoBehaviour
+public class SettingsPopUp : BasePopup
 {
     [SerializeField] Slider difficultySlider;
     [SerializeField] TextMeshProUGUI difficultyLabel;
@@ -15,6 +15,8 @@ public class SettingsPopUp : MonoBehaviour
         Close();
         options.Open();
         PlayerPrefs.SetInt("difficulty", (int)difficultySlider.value);
+        Messenger<int>.Broadcast(GameEvent.DIFFICULTY_CHANGED, (int)difficultySlider.value);
+
     }
     public void OnCancelButton()
     {
@@ -22,19 +24,11 @@ public class SettingsPopUp : MonoBehaviour
         options.Open();
     }
 
-    public void Open()
+    override public void Open()
     {
-        gameObject.SetActive(true);
+        base.Open();
         difficultySlider.value = PlayerPrefs.GetInt("difficulty", 1);
         UpdateDifficulty(difficultySlider.value);
-    }
-    public void Close()
-    {
-        gameObject.SetActive(false);
-    }
-    public bool IsActive()
-    {
-        return gameObject.activeSelf;
     }
 
     public void UpdateDifficulty(float difficulty)

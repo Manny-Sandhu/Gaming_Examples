@@ -21,7 +21,12 @@ public class ReactiveTarget : MonoBehaviour
     {
         WanderingAI enemyAI = GetComponent<WanderingAI>();
         if(enemyAI != null) {
-            enemyAI.ChangeState(EnemyStates.dead);
+            if(enemyAI.GetState() == EnemyStates.alive)
+            {
+                enemyAI.ChangeState(EnemyStates.dead);
+                Messenger.Broadcast(GameEvent.ENEMY_DEAD);
+            }
+           
             Animator enemyAnimator = GetComponent<Animator>();
             if (enemyAnimator != null)
             {

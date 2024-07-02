@@ -5,26 +5,26 @@ using UnityEngine;
 public class PlayerCharacter : MonoBehaviour
 {
     private int health;
+    private int maxHealth = 5;
+    private float healthPercent;
 
     // Use this for initialization
     void Start()
     {
-        health = 5;
+        health = maxHealth;
+        healthPercent = 1;
     }
 
     public void Hit()
     {
         health -= 1;
-        Debug.Log("Health: " + health);
+        healthPercent = (float)health / maxHealth;
+        Messenger<float>.Broadcast(GameEvent.HEALTH_CHANGED, healthPercent);
+
+        /*Debug.Log("Health: " + health);
         if (health == 0)
         {
             Debug.Break();
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }*/
     }
 }

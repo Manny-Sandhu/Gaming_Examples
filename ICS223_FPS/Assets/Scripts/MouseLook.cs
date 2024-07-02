@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-public class MouseLook : MonoBehaviour
+public class MouseLook : ActiveDurringGamePlay
 {
     // enum to set values by name instead of number.
     // makes code more readable!
@@ -22,7 +22,6 @@ public class MouseLook : MonoBehaviour
     public float minVert = -45.0f;
     public float maxVert = 45.0f;
     private float rotationX = 0.0f;
-
 
     // Start is called before the first frame update
     void Start()
@@ -57,5 +56,15 @@ public class MouseLook : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(rotationX, rotationY, 0);
         }
+    }
+
+    public void OnGameActive()
+    {
+        this.enabled = true;
+    }
+
+    public void OnGameInactive()
+    {
+        this.enabled = false;
     }
 }

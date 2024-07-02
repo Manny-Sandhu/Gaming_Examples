@@ -3,22 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionsPopUp : MonoBehaviour
+public class OptionsPopUp : BasePopup
 {
-    [SerializeField] UIController controller;
     [SerializeField] SettingsPopUp settings;
-    public void Open()
-    {
-        gameObject.SetActive(true);
-    }
-    public void Close()
-    {
-        gameObject.SetActive(false);
-    }
-    public bool IsActive()
-    {
-        return gameObject.activeSelf;
-    }
+
     public void OnSettingsButton()
     {
         Debug.Log("settings clicked");
@@ -34,6 +22,5 @@ public class OptionsPopUp : MonoBehaviour
     {
         Debug.Log("return to game");
         Close();
-        controller.SetGameActive(true);
     }
 }
